@@ -1,0 +1,73 @@
+<div id="header-pre-section">
+  <div class="container">
+    <div class="row">
+      <div
+        class="col-lg-8 col-md-8 col-md-offset-0 col-sm-8 col-sm-offset-3 col-xs-12"
+      >
+        <ul class="list-inline list-header-pre-section ">
+          <li>
+            <p class="btn btn-sm btn-login">
+              <i class="fa fa-map-marker icon-login hidden-xs"></i>
+
+              {{ .header_address }}
+            </p>
+          </li>
+          <li>
+            <p class="btn btn-sm btn-login">
+              <i class="fa fa-envelope  icon-login hidden-xs"></i>
+              {{ .header_email }}
+            </p>
+          </li>
+          <li>
+            <p class="btn btn-sm btn-login" href="#" target="_blank">
+              <img
+                class="location-icon fa fa-users "
+                src="{{ .Site.BaseURL}}icon/whatsapp.svg"
+                alt="{{ .Params.title }}"
+              />
+
+              {{ .header_phone }}
+            </p>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+        <ul
+          class="list-inline list-header-pre-section list-header-pre-section-right hidden-xs hidden-sm"
+        >
+          <li>
+            <a
+              class="btn btn-sm btn-login"
+              href="{{ .header_facebook }}"
+              target="_blank"
+            >
+              <i class="fa fa-facebook  icon-login hidden-xs"></i>
+
+              Facebook</a
+            >
+          </li>
+
+          <li>
+            <a
+              class="btn btn-sm btn-login"
+              href="{{ .header_instagram }}"
+              target="_blank"
+            >
+              <i class="fa fa-instagram  icon-login hidden-xs"></i>
+
+              Instagram</a
+            >
+          </li>
+
+          <li>
+            <div class="btn btn-sm btn-login" data-netlify-identity-button>
+              <i class="fa fa-users  icon-login hidden-xs"></i>
+
+              Login
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

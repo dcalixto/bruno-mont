@@ -21,7 +21,7 @@ destination: ./_site
 # Compress CSS
 sass:
   style: :compressed
-  sass_dir: assets/css/
+  sass_dir: _sass
 
 #Permalink format (/blog/ is ignored for pages)
 permalink: /post/:title

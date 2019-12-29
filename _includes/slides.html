@@ -1,8 +1,7 @@
 <section class="noswipemenu-matrix">
   <div class="swiper-container startpage-slider">
     <div class="swiper-wrapper">
-      {{ range first 5 (where .Site.RegularPages ".Type" "slides") }}
-
+      {% for slide in site.slides %}
       <div
         class="startpage-header swiper-slide"
         style="background-image: url('{{ .Params.image}}')"
@@ -15,11 +14,11 @@
                   class="list-unstyled list-big-headlines text-shadow-default "
                 >
                   <li>
-                    {{ .Params.heading }}
+                    {{ slide.heading }}
                   </li>
                 </ul>
                 <p class="lead text-shadow-default">
-                  {{ .Params.text }}
+                  {{ slide.text }}
                 </p>
                 <ul class="list-unstyled list-inline list-buttons">
                   <li>
@@ -28,7 +27,7 @@
                       href="dedicated-rootserver/ex52-nvme"
                       class="btn btn-yellow"
                     >
-                      {{ .Params.link }}
+                      {{ slide.link }}
                     </a>
                   </li>
                 </ul>
@@ -37,7 +36,7 @@
           </div>
         </div>
       </div>
-      {{end }}
+      {% endfor %}
     </div>
     <div class="swiper-pagination"></div>
     <div class="swiper-button-prev swiper-left hidden-xs">

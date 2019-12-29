@@ -6,18 +6,20 @@ backend:
 media_folder: "assets/img" # Media files will be stored in the repo under static/images/uploads
 public_folder: "/img" # The src attribute for uploaded media will begin with /images/uploads
 sort: "date:desc" # Default is title:asc
-media_library:
-  name: img
-  config:
-    multiple: true
+#media_library:
+ # name: img
+ # config:
+ #   multiple: true
 
 collections: # A list of collections the CMS should be able to edit
-  - name: "posts" # Used in routes, ie.: /admin/collections/:slug/edit
-    label: "Posts" # Used in the UI, ie.: "New Post"
-    #label_singular: "Post"
-    description: "Adicionar trabalhos"
+   - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
+    label: "Post" # Used in the UI, ie.: "New Post"
     folder: "_posts" # The path to the folder where the documents are stored
+    sort: "date:desc" # Default is title:asc
     create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    description: "Adicionar trabalhos"
+
     fields: # The fields each document in this collection have
       - { label: "Title", name: "title", widget: "string", required: false }
       - {
@@ -35,10 +37,7 @@ collections: # A list of collections the CMS should be able to edit
           required: false,
         }
 
-  - label: "Gallery"
-    name: "galleryImages"
-    widget: "list"
-    field: { label: Image, name: image, widget: image }
+
 
   - name: "slides" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Slide" # Used in the UI, ie.: "New Post"
@@ -53,6 +52,9 @@ collections: # A list of collections the CMS should be able to edit
       - { label: "Text", name: "text", widget: "markdown", required: false }
   - name: "pages"
     label: "Pages"
+    sort: "title:asc"
+    create: false
+    slug: "{{slug}}"
     files:
       - file: "index.md"
         label: "Home Page"

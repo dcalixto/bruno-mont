@@ -5,10 +5,11 @@ backend:
 
 media_folder: "assets/img" # Media files will be stored in the repo under static/images/uploads
 public_folder: "/img" # The src attribute for uploaded media will begin with /images/uploads
+sort: "date:desc" # Default is title:asc
 media_library:
-    name: img
-    config:
-      multiple: true
+  name: img
+  config:
+    multiple: true
 
 collections: # A list of collections the CMS should be able to edit
   - name: "posts" # Used in routes, ie.: /admin/collections/:slug/edit
@@ -25,42 +26,8 @@ collections: # A list of collections the CMS should be able to edit
           widget: "datetime",
           required: false,
         }
-      - {
-          label: "Image",
-          name: "image",
-          widget: "image",
-          required: false,
-          
-        }
-        - {
-          label: "Image2",
-          name: "image2",
-          widget: "image",
-          required: false
-      
-        }
-        - {
-          label: "Image3",
-          name: "image3",
-          widget: "image",
-          required: false,
-      
-        }
+      - { label: "Image", name: "image", widget: "image", required: false }
 
-        - {
-          label: "Image4",
-          name: "image4",
-          widget: "image",
-          required: false,
-      
-        }
-        - {
-          label: "Image5",
-          name: "image5",
-          widget: "image",
-          required: false,
-      
-        }
       - {
           label: "Content",
           name: "content",
@@ -71,9 +38,8 @@ collections: # A list of collections the CMS should be able to edit
   - label: "Gallery"
     name: "galleryImages"
     widget: "list"
-    field: {label: Image, name: image, widget: image}
-    
-            
+    field: { label: Image, name: image, widget: image }
+
   - name: "slides" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Slide" # Used in the UI, ie.: "New Post"
     label_singular: "Slide"
@@ -123,7 +89,6 @@ collections: # A list of collections the CMS should be able to edit
               widget: string,
               required: false,
             }
-       
 
           - {
               label: "Services",

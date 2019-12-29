@@ -6,13 +6,13 @@ backend:
 media_folder: "assets/img" # Media files will be stored in the repo under static/images/uploads
 public_folder: "/img" # The src attribute for uploaded media will begin with /images/uploads
 sort: "date:desc" # Default is title:asc
-#media_library:
- # name: img
- # config:
- #   multiple: true
+media_library:
+  name: img
+  config:
+    multiple: true
 
 collections: # A list of collections the CMS should be able to edit
-   - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
+  - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Post" # Used in the UI, ie.: "New Post"
     folder: "_posts" # The path to the folder where the documents are stored
     sort: "date:desc" # Default is title:asc
@@ -36,8 +36,6 @@ collections: # A list of collections the CMS should be able to edit
           widget: "markdown",
           required: false,
         }
-
-
 
   - name: "slides" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Slide" # Used in the UI, ie.: "New Post"

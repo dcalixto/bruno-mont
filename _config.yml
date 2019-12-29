@@ -13,6 +13,7 @@ kramdown:
 
 plugins:
   - jekyll-paginate
+  - jekyll-seo-tag
 paginate: 10
 paginate_path: /page-:num
 
@@ -39,6 +40,14 @@ analytics: false
 # Compress HTML (in liquid via layouts/compress.html)
 compress_html:
   clippings: all
+
+# Social
+
+social:
+  name: Bruno Montagem
+  links:
+    - https://twitter.com/Brunomontagem
+    - https://www.facebook.com/Brunomontagem
 
 # set some common post defaults
 defaults:

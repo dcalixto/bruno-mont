@@ -1,0 +1,335 @@
+backend:
+  name: git-gateway
+  branch: master # Branch to update (optional; defaults to master)
+  publish_mode: editorial_workflow
+
+media_folder: "assets/img" # Media files will be stored in the repo under static/images/uploads
+public_folder: "/img" # The src attribute for uploaded media will begin with /images/uploads
+sort: "date:desc" # Default is title:asc
+media_library:
+  name: img
+  config:
+    multiple: true
+
+collections: # A list of collections the CMS should be able to edit
+  - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
+    label: "Post" # Used in the UI, ie.: "New Post"
+    folder: "_posts" # The path to the folder where the documents are stored
+    sort: "date:desc" # Default is title:asc
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    description: "Adicionar trabalhos"
+    identifier_field: title
+
+    fields: # The fields each document in this collection have
+      - { label: "Title", name: "title", widget: "string", required: false }
+      - {
+          label: "Publish Date",
+          name: "date",
+          widget: "datetime",
+          required: false,
+        }
+      - { label: "Image", name: "image", widget: "image", required: false }
+
+      - {
+          label: "Content",
+          name: "content",
+          widget: "markdown",
+          required: false,
+        }
+
+  - name: "slides" # Used in routes, ie.: /admin/collections/:slug/edit
+    label: "Slide" # Used in the UI, ie.: "New Post"
+    label_singular: "Slide"
+    description: "Adicionar slides"
+    identifier_field: heading
+    folder: "_slides" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields each document in this collection have
+      - { label: "Heading", name: "heading", widget: "string", required: false }
+      - { label: "Link", name: "link", widget: "string", required: false }
+      - { label: "Image", name: "image", widget: "image", required: false }
+      - { label: "Text", name: "text", widget: "markdown", required: false }
+  - name: "pages"
+    label: "Pages"
+    sort: "title:asc"
+    create: false
+    slug: "{{slug}}"
+    files:
+      - file: "index.md"
+        label: "Home Page"
+        name: "home"
+        fields:
+          - { label: Title, name: title, widget: string, required: false }
+          - {
+              label: Header-Address,
+              name: header_address,
+              widget: string,
+              required: false,
+            }
+          - {
+              label: Header-Phone,
+              name: header_phone,
+              widget: string,
+              required: false,
+            }
+          - {
+              label: Header-Email,
+              name: header_email,
+              widget: string,
+              required: false,
+            }
+          - {
+              label: Header-Facebook,
+              name: header_facebook,
+              widget: string,
+              required: false,
+            }
+          - {
+              label: Header-Instagram,
+              name: header_instagram,
+              widget: string,
+              required: false,
+            }
+
+          - {
+              label: "Services",
+              name: services,
+              widget: object,
+              fields:
+                [
+                  {
+                    label: "Service-Title",
+                    name: "service_title",
+                    widget: string,
+                    required: false,
+                  },
+                  {
+                    label: "Service-Subtitle",
+                    name: "service_subtitle",
+                    widget: "string",
+                    required: false,
+                  },
+                  {
+                    label: "Service-Heading",
+                    name: "service_heading",
+                    widget: text,
+                    required: false,
+                  },
+                  {
+                    label: "Service-Text",
+                    name: "service_text",
+                    widget: "text",
+                    required: false,
+                  },
+                ],
+            }
+          - {
+              label: "Service-Box",
+              name: service_box,
+              widget: object,
+              fields:
+                [
+                  {
+                    label: "Service-Box-Title-1",
+                    name: "service_box_title1",
+                    widget: string,
+                    required: false,
+                  },
+                  {
+                    label: "Service-Box-Text-1",
+                    name: "service_box_text1",
+                    widget: "text",
+                    required: false,
+                  },
+                  {
+                    label: "Service-Box-Title-2",
+                    name: "service_box_title2",
+                    widget: string,
+                    required: false,
+                  },
+                  {
+                    label: "Service-Box-Text-2",
+                    name: "service_box_text2",
+                    widget: "text",
+                    required: false,
+                  },
+                  {
+                    label: "Service-Box-Title-3",
+                    name: "service_box_title3",
+                    widget: string,
+                    required: false,
+                  },
+                  {
+                    label: "Service-Box-Text-3",
+                    name: "service_box_text3",
+                    widget: "text",
+                    required: false,
+                  },
+                ],
+            }
+          - {
+              label: "Contact-Front",
+              name: contact,
+              widget: object,
+              fields:
+                [
+                  {
+                    label: "Contact-Box-Title",
+                    name: "contact_box_title",
+                    widget: "string",
+                    required: false,
+                  },
+                  {
+                    label: "contact-Box-Heading",
+                    name: "contact_box_heading",
+                    widget: "string",
+                    required: false,
+                  },
+                  {
+                    label: "contact-Box-Text",
+                    name: "contact_box_text",
+                    widget: "text",
+                    required: false,
+                  },
+                  {
+                    label: "Contact-box-phone1",
+                    name: "contact_box_phone1",
+                    widget: "string",
+                    required: false,
+                  },
+                  {
+                    label: "Contact-box-phone2",
+                    name: "contact_box_phone2",
+                    widget: "string",
+                    required: false,
+                  },
+                ],
+            }
+
+          - {
+              label: "Footer",
+              name: footer,
+              widget: object,
+              fields:
+                [
+                  {
+                    label: "Footer-Phone",
+                    name: "footer_phone",
+                    widget: string,
+                    required: false,
+                  },
+                  {
+                    label: "Footer-Email",
+                    name: "footer_email",
+                    widget: "string",
+                    required: false,
+                  },
+                ],
+            }
+
+      - file: "pages/contact.md"
+        label: "Contact Page"
+        name: "contact"
+        fields:
+          - {
+              label: Header-Address,
+              name: header_address,
+              widget: string,
+              required: false,
+            }
+          - {
+              label: Header-Phone,
+              name: header_phone,
+              widget: string,
+              required: false,
+            }
+          - {
+              label: Header-Email,
+              name: header_email,
+              widget: string,
+              required: false,
+            }
+          - {
+              label: Header-Facebook,
+              name: header_facebook,
+              widget: string,
+              required: false,
+            }
+          - {
+              label: Header-Instagram,
+              name: header_instagram,
+              widget: string,
+              required: false,
+            }
+          - { label: Title, name: title, widget: string, required: false }
+          - { label: Image, name: background, widget: image, required: false }
+          - { label: Heading, name: body, widget: string, required: false }
+          - { label: Telefone, name: telefone, widget: string, required: false }
+
+      - file: "pages/about.md"
+        label: "About Page"
+        name: "about"
+        fields:
+          - {
+              label: Header-Address,
+              name: header_address,
+              widget: string,
+              required: false,
+            }
+          - {
+              label: Header-Phone,
+              name: header_phone,
+              widget: string,
+              required: false,
+            }
+          - {
+              label: Header-Email,
+              name: header_email,
+              widget: string,
+              required: false,
+            }
+          - {
+              label: Header-Facebook,
+              name: header_facebook,
+              widget: string,
+              required: false,
+            }
+          - {
+              label: Header-Instagram,
+              name: header_instagram,
+              widget: string,
+              required: false,
+            }
+          - { label: Title, name: title, widget: string, required: false }
+          - { label: Image, name: image, widget: image, required: false }
+          - { label: Content, name: content, widget: markdown, required: false }
+
+      - file: "includes/footer.md"
+        label: "Footer"
+        name: "footer"
+        fields:
+          - {
+              label: Footer-Phone,
+              name: footer_phone,
+              widget: string,
+              required: false,
+            }
+          - {
+              label: Footer-Email,
+              name: footer_email,
+              widget: string,
+              required: false,
+            }
+          - {
+              label: Footer-Facebook,
+              name: header_facebook,
+              widget: string,
+              required: false,
+            }
+          - {
+              label: Footer-Instagram,
+              name: header_instagram,
+              widget: string,
+              required: false,
+            }

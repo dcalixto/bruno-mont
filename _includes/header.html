@@ -14,19 +14,19 @@
         <h4>Inicio</h4>
       </a>
       <a
-        href="{{ site.baseurl }}posts"
+        href="{{ site.baseurl }}/posts"
         class="link-color-white nav-menu-item-wrapper"
       >
         <h4>Trabalhos</h4>
       </a>
       <a
-        href="{{ site.baseurl }}pages/about"
+        href="{{ site.baseurl }}/pages/about"
         class="link-color-white nav-menu-item-wrapper"
       >
         <h4>Sobre</h4>
       </a>
       <a
-        href="{{ site.baseurl }}pages/contact"
+        href="{{ site.baseurl }}/pages/contact"
         class="link-color-white nav-menu-item-wrapper"
       >
         <h4>Contato</h4>
@@ -58,8 +58,8 @@
           <img
             style="width:200px;height:30px"
             class="navbar-logo"
-            src="{{ site.baseurl }}img/bruno-logo.svg"
-            alt="{{ .site.title }}"
+            src="{{ site.baseurl }}/assets/img/bruno-logo.svg"
+            alt="{{ site.title }}"
           />
         </a>
       </div>
@@ -69,6 +69,7 @@
           <li data-target="#nav-virtual">
             <a class="nav-link" href="{{ site.baseurl }}">Inicio</a>
           </li>
+
           {% for item in site.data.menu %}
           <li
             data-target="#nav-virtual"

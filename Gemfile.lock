@@ -1,11 +1,3 @@
-GIT
-  remote: https://github.com/erikkallen/jekyll-font-awesome-sass.git
-  revision: d598ee4dc1a9123b79d3ea1a83b6fee42948b273
-  specs:
-    jekyll-font-awesome-sass (0.1.1)
-      font-awesome-sass (>= 4)
-      jekyll (>= 2.5, < 5.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -18,8 +10,6 @@ GEM
       http_parser.rb (~> 0.6.0)
     eventmachine (1.2.7)
     ffi (1.11.3)
-    font-awesome-sass (5.12.0)
-      sassc (>= 1.11)
     forwardable-extended (2.6.0)
     http_parser.rb (0.6.0)
     i18n (1.7.0)
@@ -73,7 +63,6 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll (~> 4.0.0)
-  jekyll-font-awesome-sass!
   jekyll-paginate
   jekyll-seo-tag
 

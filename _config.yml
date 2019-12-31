@@ -26,7 +26,7 @@ sass:
 
 #Permalink format (/blog/ is ignored for pages)
 #permalink: /post/:title
-permalink: :slug/
+#permalink: :slug/
 
 #Collections
 collections:

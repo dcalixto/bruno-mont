@@ -31,16 +31,8 @@ permalink: :slug/
 #Collections
 collections:
   slides:
-
-# Jekyll collections
-# Documentation - https://jekyllrb.com/docs/collections/
-#collections_dir: collections
-#collections:
-# slides:
-#  slide: true
-#  permalink: /:slug
-# Enable section IDs in frontmatter, useful for identifying current page
-# (used as a hook for styling etc)
+include:
+  - _pages
 section: true
 
 # set to 'true' to enable Netlify CMS (/admin) in production builds

@@ -1,8 +1,8 @@
 - text: Home
   url: /
 - text: Sobre
-  url: /sobre
+  url: /about
 - text: Contato
-  url: /contato
+  url: /contact
 - text: Post
   url: /post

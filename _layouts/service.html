@@ -1,0 +1,78 @@
+---
+layout: default
+---
+
+{{ content }}
+<section id="header-section">
+  <div
+    class="header-background-image"
+    style="background-image:url('{{ image}}');"
+  >
+    <div class="container">
+      <div class="row row-flex-center-md">
+        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+          <div class="color-white text-shadow-default">
+            <ul class="list-unstyled list-big-headlines">
+              <li>
+                <h1>Trabalhos Recentes</h1>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="background-color-grey">
+  <div class="inner-content-top-out-bottom-out">
+    <div class="container">
+      <div class="row">
+        <div class="news-press-section">
+          <div class="press-news-container">
+            <div class="col-md-6">
+              <ul class="list-unstyled list-news">
+                <!-- orders content according to the "publishdate" field in front matter -->
+                {% for post in site.posts %}
+
+                <li>
+                  <div class="row">
+                    <div class="col-sm-9">
+                      <img class="pull-left" src="{{post.image}}" />
+
+                      <div class="row">
+                        <div class="col-xs-8 col-sm-6">
+                          <a href="{{ post.url }}"><h3>{{ post.title }}</h3></a>
+                        </div>
+                        <div class="col-xs-4 col-sm-6">
+                          <p>
+                            {{ post.heading}}
+                          </p>
+                          <p>
+                            {{ post.content}}
+                          </p>
+                          <small>{{ post.date }}</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <ul>
+                  <!-- Ranges through content/posts/*.md -->
+                  <!-- {{ range .Pages }}-->
+                  <li>
+                    <a href="{{post.permalink}}"
+                      >{{post.date}} | {{post.title}}</a
+                    >
+                  </li>
+                  <!--  {{ end }}-->
+                </ul>
+                {% endfor %}
+                <!--{{ end }}-->
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

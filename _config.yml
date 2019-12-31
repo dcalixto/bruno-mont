@@ -16,7 +16,8 @@ plugins:
   - jekyll-seo-tag
 paginate: 10
 paginate_path: /page-:num
-
+#Permalink
+permalink: /service/:title
 source: .
 destination: ./_site
 # Compress CSS

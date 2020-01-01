@@ -14,9 +14,10 @@ kramdown:
 plugins:
   - jekyll-paginate
   - jekyll-seo-tag
-paginate: 10
-paginate_path: /service/page-:num
-
+#paginate: 3
+#paginate_path: service/page:num/
+paginate: 3
+paginate_path: posts/page:num/
 #pagination:
 # enabled: true
 #per_page: 12

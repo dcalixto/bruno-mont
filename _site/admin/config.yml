@@ -3,8 +3,8 @@ backend:
   branch: master # Branch to update (optional; defaults to master)
   publish_mode: editorial_workflow
 
-media_folder: "assets/img" # Media files will be stored in the repo under static/images/uploads
-public_folder: "/img" # The src attribute for uploaded media will begin with /images/uploads
+media_folder: "/assets/img" # Media files will be stored in the repo under static/images/uploads
+public_folder: "/assets/img" # The src attribute for uploaded media will begin with /images/uploads
 sort: "date:desc" # Default is title:asc
 media_library:
   name: img
@@ -341,9 +341,19 @@ collections: # A list of collections the CMS should be able to edit
     create: false
     slug: "{{slug}}"
     fields:
-      - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
-      - {label: "Title", name: "title", widget: "string", tagname: "h1"}
-      - {label: "Permalink", name: "permalink", widget: "hidden"}
-      - {label: "Section", name: "section", widget: "hidden", default: "{{name}}"}
-      - {label: "Intro Paragraph", name: "intro_paragraph", widget: "markdown", required: false}
-      - {label: "Body", name: "body", widget: "markdown", required: false}
+      - { label: "Layout", name: "layout", widget: "hidden", default: "page" }
+      - { label: "Title", name: "title", widget: "string", tagname: "h1" }
+      - { label: "Permalink", name: "permalink", widget: "hidden" }
+      - {
+          label: "Section",
+          name: "section",
+          widget: "hidden",
+          default: "{{name}}",
+        }
+      - {
+          label: "Intro Paragraph",
+          name: "intro_paragraph",
+          widget: "markdown",
+          required: false,
+        }
+      - { label: "Body", name: "body", widget: "markdown", required: false }

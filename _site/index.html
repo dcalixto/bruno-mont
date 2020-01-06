@@ -9,7 +9,7 @@
 <meta property="og:url" content="http://localhost:4000/" />
 <meta property="og:site_name" content="Bruno Montagem Express" />
 <script type="application/ld+json">
-{"sameAs":["https://twitter.com/Brunomontagem","https://www.facebook.com/Brunomontagem"],"url":"http://localhost:4000/","@type":"WebSite","name":"Bruno Montagem","headline":"Welcome","@context":"https://schema.org"}</script>
+{"url":"http://localhost:4000/","@type":"WebSite","headline":"Welcome","name":"Bruno Montagem","sameAs":["https://twitter.com/Brunomontagem","https://www.facebook.com/Brunomontagem"],"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   <head>
@@ -20,9 +20,14 @@
   </title>
   <link rel="stylesheet" href="/assets/css/main.css">
   <link
+    rel="stylesheet"
+    href="/assets/css/lightbox.css"
+  />
+  <link
     href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
     rel="stylesheet"
   />
+
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 
@@ -198,6 +203,7 @@
 
 
  
+          <li><a href="/photos/">Photos</a></li>
         </ul>
       </div>
     </div>
@@ -443,7 +449,16 @@ End Slide
       <h2 class="text-center">Trabalhos Recentes</h2>
       <div class="row">
         <div class="news-press-section">
-          
+                           
+          <a href="Slides" title="Slides">
+            <img
+              src="thumbs/Slides"
+              alt="Slides"
+              title="Slides"
+            />
+            <span></span>
+          </a>
+              
 
           <div class="press-news-container">
             <div class="col-md-6">
@@ -451,15 +466,11 @@ End Slide
                 <li>
                   <div class="row">
                     <div class="col-sm-9">
-                      <img
-                        class="pull-left"
-                        src="http://via.placeholder.com/150x150/1f1a38/ffffff?text=Image"
-                      />
+                      <img class="pull-left" src="holder.js/410x200" />
+
                       <div class="row">
                         <div class="col-xs-8 col-sm-6">
-                          <a href=""
-                            ><h3>teste5</h3></a
-                          >
+                          <a href="/service/teste5"><h3>teste5</h3></a>
                         </div>
                         <div class="col-xs-4 col-sm-6">
                           <p>
@@ -484,15 +495,11 @@ End Slide
                 <li>
                   <div class="row">
                     <div class="col-sm-9">
-                      <img
-                        class="pull-left"
-                        src="http://via.placeholder.com/150x150/1f1a38/ffffff?text=Image"
-                      />
+                      <img class="pull-left" src="holder.js/410x200" />
+
                       <div class="row">
                         <div class="col-xs-8 col-sm-6">
-                          <a href=""
-                            ><h3>teste4</h3></a
-                          >
+                          <a href="/service/teste4"><h3>teste4</h3></a>
                         </div>
                         <div class="col-xs-4 col-sm-6">
                           <p>
@@ -517,15 +524,11 @@ End Slide
                 <li>
                   <div class="row">
                     <div class="col-sm-9">
-                      <img
-                        class="pull-left"
-                        src="http://via.placeholder.com/150x150/1f1a38/ffffff?text=Image"
-                      />
+                      <img class="pull-left" src="holder.js/410x200" />
+
                       <div class="row">
                         <div class="col-xs-8 col-sm-6">
-                          <a href=""
-                            ><h3>teste3</h3></a
-                          >
+                          <a href="/service/teste3"><h3>teste3</h3></a>
                         </div>
                         <div class="col-xs-4 col-sm-6">
                           <p>
@@ -550,15 +553,11 @@ End Slide
                 <li>
                   <div class="row">
                     <div class="col-sm-9">
-                      <img
-                        class="pull-left"
-                        src="http://via.placeholder.com/150x150/1f1a38/ffffff?text=Image"
-                      />
+                      <img class="pull-left" src="holder.js/410x200" />
+
                       <div class="row">
                         <div class="col-xs-8 col-sm-6">
-                          <a href=""
-                            ><h3>teste2</h3></a
-                          >
+                          <a href="/service/teste2"><h3>teste2</h3></a>
                         </div>
                         <div class="col-xs-4 col-sm-6">
                           <p>
@@ -754,12 +753,10 @@ End Slide
     <i class="fa fa-arrow-up"></i>
   </div>
   
-      
-
-    <!-- Bootstrap core JavaScript -->
-    <script src="/assets/js/vendor.js"></script>
-    <script src="/assets/js/app.js"></script>
-
+      <!-- Bootstrap core JavaScript -->
+<script src="/assets/js/vendor.js"></script>
+<script src="/assets/js/app.js"></script>
+<script src="/assets/js/holder.js"></script>
 <script>
   $(document).ready(function() {
     //initialize swiper when document ready

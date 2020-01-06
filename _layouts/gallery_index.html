@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "pt-BR" }}">
+    {% seo %}
+  {% include head.html %}
+  <body>
+    {% include header.html %}
+    <main>
+        {{ content}}
+      
+    <div id="gallery-list">
+      {% for gallery in page.galleries %}
+      <div class="gallery-index">
+        <a href="{{ gallery['gallery'] }}">
+          <img
+            alt="{{ gallery['name'] }}"
+            src="{{ gallery['gallery'] }}/thumbs/{{ gallery['best_image'] }}"
+          />
+        </a>
+        <h3><a href="{{ gallery['gallery'] }}">{{ gallery["name"] }}</a></h3>
+        {{ gallery["images"] | size }} images
+      </div>
+      {% endfor %}
+    </div>
+</main>
+{% include footer.html %}
+{% include script.html %}
+  </body>
+</html>

@@ -69,6 +69,11 @@
        
           {% include navigation.html navigation=site.data.navigation %} 
           <li><a href="/{{ site.gallery.dir }}/">Photos</a></li>
+          {% for item in site.menus.header %}
+  <li class="menu-item-{{ loop.index }}">
+    <a href="{{ item.url }}" title="Go to {{ item.title }}">{{ item.title }}</a>
+  </li>
+{% endfor %}
         </ul>
       </div>
     </div>

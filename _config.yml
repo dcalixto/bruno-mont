@@ -15,6 +15,7 @@ plugins:
   - jekyll-paginate
   - jekyll-seo-tag
   - jekyll-gallery-generator
+  - jekyll-menus
 #paginate: 3
 #paginate_path: service/page:num/
 paginate: 3
@@ -70,7 +71,7 @@ include:
 section: true
 
 # set to 'true' to enable Netlify CMS (/admin) in production builds
-netlifycms: true
+netlifycms: false
 
 # set to 'true' to enable Google Analytics tracking code in production builds
 analytics: false

@@ -1,14 +1,22 @@
 ---
 header:
-  - text: Home
-    url: /
-  - text: Sobre
-    url: /about
-  - text: Contato
-    url: /contact
-  - text: Serviços
-    url: /posts
-  - text: Trabalhos
-    url: /photos
----
-
+- text: Serviços
+  url: "/posts"
+  weight: 2
+  title: Posts
+- text: Trabalhos
+  url: "/photos"
+  weight: 1
+  title: Fotos
+- text: Contato
+  url: "/contact"
+  weight: 3
+  title: 
+- text: Sobre
+  url: "/about"
+  weight: 4
+  title: 
+- text: Home
+  url: "/"
+  weight: 5
+  title: 

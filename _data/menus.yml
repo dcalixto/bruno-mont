@@ -1,10 +1,14 @@
-- text: Home
-  url: /
-- text: Sobre
-  url: /about
-- text: Contato
-  url: /contact
-- text: Serviços
-  url: /posts
-- text: Trabalhos
-  url: /photos
+---
+header:
+  - text: Home
+    url: /
+  - text: Sobre
+    url: /about
+  - text: Contato
+    url: /contact
+  - text: Serviços
+    url: /posts
+  - text: Trabalhos
+    url: /photos
+---
+

@@ -1,0 +1,23 @@
+---
+label: slide
+hide_body: false
+fields:
+  - name: heading
+    label: Heading
+    type: text
+    hidden: false
+    default: ""
+  - type: markdown
+    label: Text
+    name: text
+    default: ""
+  - name: link
+    label: Link
+    type: string
+    hidden: false
+    default: ""
+
+  - type: file
+    name: image
+    label: Image
+    default: ""

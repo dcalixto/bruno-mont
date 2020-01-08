@@ -1,3 +1,5 @@
+{% if site.data.information %} {% assign info = site.data.information %}
+
 <div id="header-pre-section">
   <div class="container">
     <div class="row">
@@ -8,14 +10,13 @@
           <li>
             <p class="btn btn-sm btn-login">
               <i class="fa fa-map-marker icon-login hidden-xs"></i>
-
-              {{ .header_address }}
+              {{ info.address }}
             </p>
           </li>
           <li>
             <p class="btn btn-sm btn-login">
               <i class="fa fa-envelope  icon-login hidden-xs"></i>
-              {{ .header_email }}
+              {{ info.email }}
             </p>
           </li>
           <li>
@@ -23,10 +24,10 @@
               <img
                 class="location-icon fa fa-users "
                 src="{{ site.baseurl }}/assets/icon/whatsapp.svg"
-                alt="{{ .title }}"
+                alt="{{ info.phone }}"
               />
 
-              {{ .header_phone }}
+              {{ info.phone }}
             </p>
           </li>
         </ul>
@@ -38,7 +39,7 @@
           <li>
             <a
               class="btn btn-sm btn-login"
-              href="{{ header_facebook }}"
+              href="{{ info.facebook }}"
               target="_blank"
             >
               <i class="fa fa-facebook  icon-login hidden-xs"></i>
@@ -50,7 +51,7 @@
           <li>
             <a
               class="btn btn-sm btn-login"
-              href="{{ header_instagram }}"
+              href="{{ info.instagram }}"
               target="_blank"
             >
               <i class="fa fa-instagram  icon-login hidden-xs"></i>
@@ -63,3 +64,4 @@
     </div>
   </div>
 </div>
+{% endif %}

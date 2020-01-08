@@ -15,10 +15,12 @@ sections:
   templates:
   - post
 - type: directory
-  path: "./_slides"
+  path: _slides
   label: Slides
   create: all
   match: "**/*"
+  templates:
+  - slide
 - type: directory
   path: "./photos"
   label: Photos

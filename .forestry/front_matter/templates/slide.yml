@@ -20,5 +20,3 @@ fields:
   name: image
   label: Image
   default: ''
-pages:
-- "./_slides/_slides/slide2.md"

@@ -18,14 +18,14 @@ sections:
   path: _slides
   label: Slides
   create: all
-  match: "**/*"
+  match: "*"
   templates:
   - slide
 - type: directory
   path: "./photos"
   label: Photos
   create: all
-  match: "**/*"
+  match: "*"
 - type: document
   path: _data/information.yml
   label: Contact Information

@@ -2,22 +2,23 @@
 label: slide
 hide_body: false
 fields:
-  - name: heading
-    label: Heading
-    type: text
-    hidden: false
-    default: ""
-  - type: text
-    label: Text
-    name: text
-    default: ""
-  - name: link
-    label: Link
-    type: text
-    hidden: false
-    default: ""
-
-  - type: file
-    name: image
-    label: Image
-    default: ""
+- name: heading
+  label: Heading
+  type: text
+  hidden: false
+  default: ''
+- type: text
+  label: Text
+  name: text
+  default: ''
+- name: link
+  label: Link
+  type: text
+  hidden: false
+  default: ''
+- type: file
+  name: image
+  label: Image
+  default: ''
+pages:
+- "./_slides/_slides/slide2.md"

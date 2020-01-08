@@ -2,8 +2,8 @@
 label: posts
 hide_body: false
 fields:
-  - name: layout
-    label: Layout
-    type: text
-    hidden: false
-    default: post
+- name: layout
+  label: Layout
+  type: text
+  hidden: false
+  default: post

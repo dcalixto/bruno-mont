@@ -2,8 +2,8 @@
 label: slides
 hide_body: false
 fields:
-  - name: layout
-    label: Layout
-    type: text
-    hidden: false
-    default: slide
+- name: layout
+  label: Layout
+  type: text
+  hidden: false
+  default: slide

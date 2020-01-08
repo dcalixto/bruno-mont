@@ -13,7 +13,7 @@ fields:
     default: ""
   - name: link
     label: Link
-    type: string
+    type: text
     hidden: false
     default: ""
 

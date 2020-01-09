@@ -1,3 +1,5 @@
+
+{% if page.services %}
 <section class="background-color-grey">
     <div class="inner-content-top-in-bottom-out">
       <div class="container">
@@ -22,7 +24,7 @@
                 
                 </p>
                 {{ services.service_text }}
-  
+                {% for item in page.services %}
                 <div class="container">
                   <div class="box-gray">
                     <div class="row">
@@ -35,9 +37,11 @@
                             alt="furniture"
                             style="width:150px"
                           />
-                          <h1 class="title">{{ service_box.service_box_title1}}</h1>
+                          <h1 class="title">{ item.heading }}
+                            {{ service_box.service_box_title1}}</h1>
                           <div class="texto">
                             <p> 
+                              {{ item.description }}
                                 {{ service_box.service_box_text1}}
                             </p>
                           </div>
@@ -77,6 +81,7 @@
                     </div>
                   </div>
                 </div>
+                {% endfor %}
               </div>
               <div class="info-box-ref">
                 <div class="info-box-price">Aceitamos todos os cartoes</div>
@@ -94,4 +99,4 @@
     </div>
   </section>
   
-  
+  {% endif %}

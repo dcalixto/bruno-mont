@@ -1,3 +1,4 @@
+{% if site.data.information %} {% assign info = site.data.information %}
 <section>
   <div class="inner-content-top-in-bottom-in">
     <div class="container">
@@ -6,13 +7,13 @@
           class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 col-sm-6 col-xs-12"
         >
           <ul class="list-unstyled list-big-headlines ">
-            <li><h2 class="margin-0">{{contact.contact_box_title}}</h2></li>
-            <li>{{contact.contact_box_heading}}</li>
+            <li><h2 class="margin-0">Dúvidas?</h2></li>
+            <li>Entre em contato!</li>
           </ul>
-          <p>{{contact.contact_box_text}}</p>
+          <p>Pelos telefones</p>
           <ul class="list-unstyled ">
-            <li>{{contact.contact_box_phone1}}</li>
-            <li>{{contact.contact_box_phone2}}</li>
+            <li>{{ info.phone }}</li>
+            <li>{{ info.phone2 }}</li>
           </ul>
         </div>
         <div class="col-lg-4 col-md-5 col-sm-6 col-xs-12">
@@ -76,3 +77,4 @@
     </div>
   </div>
 </section>
+{% endif %}

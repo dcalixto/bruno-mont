@@ -49,7 +49,7 @@ fields:
     label: Heading
     type: text
     hidden: false
-    default: ''
+    default: PRATICIDADE
   - name: description
     label: Description
     type: text

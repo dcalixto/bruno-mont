@@ -3,7 +3,7 @@
 <section class="background-color-grey">
     <div class="inner-content-top-in-bottom-out">
       <div class="container">
-        <h1 class="text-center">{{ services.service_title }}</h1>
+        <h1 class="text-center"><!--{{ services.service_title }}--></h1>
         <div class="row">
           <div class="col-lg-12 col-md-12 col-sm-6 col-xs-12">
             <div class="info-box info-box-with-icon border-card">
@@ -16,75 +16,65 @@
                 </div>
               </div>
               <div class="info-box-content info-box-content-startpage">
-                <h3><a href="/sb">{{ services.service_subtitle }}</a></h3>
+                <h3><a href="/sb"><!--{{ services.service_subtitle }}--></a></h3>
                 <p class="margin-0">
-                  {{ services.service_heading }}
+                 <!-- {{ services.service_heading }}-->
                 </br>
                   </p>
                 
                 </p>
-                {{ services.service_text }}
-                {% for item in page.services %}
+                <!--{{ services.service_text }}-->
+               
                 <div class="container">
                   <div class="box-gray">
                     <div class="row">
+                      {% for item in page.services %}
                       <div
                         class="col-lg-3 col-md-3 col-sm-5 col-xs-11 border-right"
                       >
                         <div class="item text-center">
-                          <img
-                            src="{{ site.baseurl }}/assets/icon/furniture.svg"
-                            alt="furniture"
-                            style="width:150px"
-                          />
-                          <h1 class="title">{ item.heading }}
-                            {{ service_box.service_box_title1}}</h1>
+                          <img src="{{ item.icon | absolute_url }}" alt=""   style="width:150px">
+                       
+                          <h1 class="title">{{ item.heading }}
+                                 </h1>
                           <div class="texto">
                             <p> 
-                              {{ item.description }}
-                                {{ service_box.service_box_text1}}
+                             {{ item.description }}
+                     
                             </p>
                           </div>
                         </div>
                       </div>
-                      <div
-                        class="col-lg-3 col-md-3 col-sm-5 col-xs-11 border-right"
-                      >
-                        <div class="item text-center">
-                          <img
-                            src="{{ site.baseurl }}/assets/icon/running.svg"
-                            alt="running"
-                            style="width:150px"
-                          />
-                          <h1 class="title">{{ service_box.service_box_title2}}</h1>
-                          <div class="texto">
-                            <p>
-                                {{ service_box.service_box_text2}}
-                            </p>
-                          </div>
-                        </div>
-                      </div>
+                      {% endfor %}
   
-                      <div class="col-lg-3 col-md-3 col-sm-5 col-xs-11">
-                        <div class="item text-center ultimo">
-                          <img
-                            src="{{ site.baseurl }}/assets/icon/deal.svg"
-                            alt="deal"
-                            style="width:150px"
-                          />
-                          <h1 class="title">{{ service_box.service_box_title3}}</h1>
-                          <div class="texto">
-                            <p>{{ service_box.service_box_text3}}</p>
-                          </div>
-                        </div>
-                      </div>
                     </div>
                   </div>
                 </div>
-                {% endfor %}
+                
               </div>
               <div class="info-box-ref">
                 <div class="info-box-price">Aceitamos todos os cartoes</div>
+                <img
+                style="width:100px"
+                src="{{ site.baseurl }}/assets/icon/mastercard.svg"
+                alt="matercard"
+              />
+              <img
+              style="width:100px"
+              src="{{ site.baseurl }}/assets/icon/visa.svg"
+              alt="visa"
+            />
+            <img
+            style="width:100px"
+            src="{{ site.baseurl }}/assets/icon/elo.svg"
+            alt="elo"
+          />
+          <img
+          style="width:100px"
+          src="{{ site.baseurl }}/assets/icon/amex.svg"
+          alt="amex"
+        />
+
                 <a
                   href="{{ site.baseurl }}/contact"
                   class="btn btn-white-light"

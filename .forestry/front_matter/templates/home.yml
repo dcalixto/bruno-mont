@@ -6,7 +6,7 @@ fields:
     label: Title
     type: text
     hidden: false
-<<<<<<< HEAD
+
     default: ""
     config:
       required: true
@@ -30,17 +30,17 @@ fields:
         type: file
         hidden: false
         default: ""
-=======
+
     default: PRATICIDADE
   - name: description
     label: Description
     type: text
     hidden: false
-    default: ''
+    default: ""
   - name: icon
     label: Icon
     type: file
->>>>>>> 43fb1b1fd087c84c28e19bd137ebc9ffe0db12ba
+
     hidden: false
     default: ""
 

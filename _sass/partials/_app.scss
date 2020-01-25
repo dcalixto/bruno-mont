@@ -2566,8 +2566,8 @@ main {
 }
 
 #header-pre-section {
-  background-color: #383838;
   background-color: #fff;
+  
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -4015,7 +4015,7 @@ ul.navbar-nav li {
   text-transform: capitalize;
 
   a {
-    color: #f8f8f8;
+    color: #383838;
     padding: 0 10px;
   }
 

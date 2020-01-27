@@ -1,23 +1,16 @@
-<!DOCTYPE html>
-<html lang="{{ site.lang | default: "pt-BR" }}">
-    {% seo %}
-  {% include head.html %}
-  <body>
-    {% include header.html %}
-    <main>
-        {{ content}}
+---
+layout: default
+---
 
 <style>
   .image-gallery {
     overflow: auto;
-    margin-left: -1% !important;
   }
   .image-gallery a {
     color: silver !important;
     float: left;
     display: block;
-    margin: 0 0 1% 1%;
-    width: 19%;
+
     text-align: center;
     text-decoration: none !important;
   }
@@ -44,22 +37,132 @@
     filter: grayscale(0%) brightness(100%) contrast(100%) opacity(100%);
   }
 </style>
-<p class="image-gallery">
-  {% for image in page.images %}
-  <a href="{{ image.name }}" title="{{ image.name }}">
-    <img
-      src="thumbs/{{ image.name }}"
-      alt="{{ image.name }}"
-      title="{{ image.name }}"
-    />
-    <span>{{ filename }}</span>
-  </a>
-  {% endfor %}
-</p>
-</main>
-{% include footer.html %}
+
+<!-- Page Content -->
+<div class="container">
+  <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0">
+    {{ page.title }}
+  </h1>
+
+  <div class="row text-center text-lg-left  ">
+    {% for image in page.images %}
+    <div class="col-lg-3 col-md-4 col-6 image-gallery">
+      <a
+        href="{{ image.name }}"
+        title="{{ image.name }}"
+        class="d-block mb-4 h-100"
+      >
+        <img
+          class="img-fluid img-thumbnail"
+          src="thumbs/{{ image.name }}"
+          alt="{{ image.name }}"
+          title="{{ image.name }}"
+        />
+      </a>
+    </div>
+    {% endfor %}
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="#" class="d-block mb-4 h-100">
+        <img
+          class="img-fluid img-thumbnail"
+          src="https://source.unsplash.com/aob0ukAYfuI/400x300"
+          alt=""
+        />
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="#" class="d-block mb-4 h-100">
+        <img
+          class="img-fluid img-thumbnail"
+          src="https://source.unsplash.com/EUfxH-pze7s/400x300"
+          alt=""
+        />
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="#" class="d-block mb-4 h-100">
+        <img
+          class="img-fluid img-thumbnail"
+          src="https://source.unsplash.com/M185_qYH8vg/400x300"
+          alt=""
+        />
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="#" class="d-block mb-4 h-100">
+        <img
+          class="img-fluid img-thumbnail"
+          src="https://source.unsplash.com/sesveuG_rNo/400x300"
+          alt=""
+        />
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="#" class="d-block mb-4 h-100">
+        <img
+          class="img-fluid img-thumbnail"
+          src="https://source.unsplash.com/AvhMzHwiE_0/400x300"
+          alt=""
+        />
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="#" class="d-block mb-4 h-100">
+        <img
+          class="img-fluid img-thumbnail"
+          src="https://source.unsplash.com/2gYsZUmockw/400x300"
+          alt=""
+        />
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="#" class="d-block mb-4 h-100">
+        <img
+          class="img-fluid img-thumbnail"
+          src="https://source.unsplash.com/EMSDtjVHdQ8/400x300"
+          alt=""
+        />
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="#" class="d-block mb-4 h-100">
+        <img
+          class="img-fluid img-thumbnail"
+          src="https://source.unsplash.com/8mUEy0ABdNE/400x300"
+          alt=""
+        />
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="#" class="d-block mb-4 h-100">
+        <img
+          class="img-fluid img-thumbnail"
+          src="https://source.unsplash.com/G9Rfc1qccH4/400x300"
+          alt=""
+        />
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="#" class="d-block mb-4 h-100">
+        <img
+          class="img-fluid img-thumbnail"
+          src="https://source.unsplash.com/aJeH0KcFkuc/400x300"
+          alt=""
+        />
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="#" class="d-block mb-4 h-100">
+        <img
+          class="img-fluid img-thumbnail"
+          src="https://source.unsplash.com/p2TQ-3Bh3Oo/400x300"
+          alt=""
+        />
+      </a>
+    </div>
+  </div>
+</div>
+<!-- /.container -->
 {% include script.html %}
 <script src="{{ '/js/swipe-it.min.js' | prepend: site.baseurl }}"></script>
 <script src="{{ '/js/lightbox.js' | prepend: site.baseurl }}"></script>
-  </body>
-</html>

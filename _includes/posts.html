@@ -1,19 +1,43 @@
 <section class="background-color-grey">
   <div class="inner-content-top-out-bottom-out">
     <div class="container">
-      <h2 class="text-center">Trabalhos Recentes</h2>
+      <h2 class="text-center">Trabalhos Recentes ssss</h2>
       <div class="row">
         <div class="news-press-section">
-          {% for p in site.pages %} {% for gallery in p.galleries limit:4 %}
-          <a href="{{ site.baseurl }}/photos/{{ gallery['gallery'] }}">
-            <img
-              alt="{{ gallery['name'] }}"
-              src="/photos/{{ gallery['gallery'] }}/thumbs/{{ gallery['best_image'] }}"
-            />
-            <span>{{ filename }}</span>
-          </a>
-          <h3><a href="{{ gallery['gallery'] }}">{{ gallery["name"] }}</a></h3>
-          {{ gallery["images"] | size }} images {% endfor %} {% endfor %}
+          <div class="press-news-container">
+            <div class="col-md-6">
+              <ul class="list-unstyled list-news">
+                <!-- orders content according to the "publishdate" field in front matter -->
+                {% for p in site.pages %} {% for gallery in p.galleries limit:4
+                %}
+
+                <li>
+                  <div class="row">
+                    <div class="col-sm-9">
+                      <a
+                        href="{{ site.baseurl }}/photos/{{ gallery['gallery'] }}"
+                      >
+                        <img
+                          alt="{{ gallery['name'] }}"
+                          src="/photos/{{ gallery['gallery'] }}/thumbs/{{ gallery['best_image'] }}"
+                        />
+                      </a>
+
+                      <div class="row">
+                        <div class="col-xs-8 col-sm-6">
+                          <a href="/photos/{{ gallery['gallery'] }}"
+                            >{{ gallery["name"] }}</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                {% endfor %} {% endfor %}
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>

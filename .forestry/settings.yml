@@ -22,7 +22,7 @@ sections:
   templates:
   - slide
 - type: directory
-  path: "./photos"
+  path: photos/*
   label: Photos
   create: all
   match: "*"

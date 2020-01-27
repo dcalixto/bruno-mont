@@ -1,4 +1,9 @@
 ---
 label: photo
 hide_body: false
-fields: []
+fields:
+- name: fotos
+  type: image_gallery
+  config: {}
+  label: Fotos
+  description: Gallery

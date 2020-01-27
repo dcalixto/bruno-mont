@@ -22,14 +22,14 @@ sections:
     templates:
       - slide
   - type: directory
-    path: "photos"
+    path: photos
     label: Photos
     create: all
     match: "*"
-
   - type: document
     path: _data/information.yml
     label: Contact Information
+
 upload_dir: photos
 public_path: "/photos"
 front_matter_path: ""

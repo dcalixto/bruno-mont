@@ -45,5 +45,4 @@ fields:
   hidden: true
   default: home
 pages:
-- index.html
 - index.md

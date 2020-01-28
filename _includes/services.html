@@ -1,5 +1,5 @@
 
-{% if page.services %}
+
 <section class="background-color-grey">
     <div class="inner-content-top-in-bottom-out">
       <div class="container">
@@ -32,18 +32,19 @@
                 <div class="container">
                   <div class="box-gray">
                     <div class="row">
-                      {% for item in page.services %}
+                    
+                      {% for service in site.services limit:3 %}
                       <div
                         class="col-lg-3 col-md-3 col-sm-5 col-xs-11 border-right"
                       >
                         <div class="item text-center">
-                          <img src="{{ item.icon | absolute_url }}" alt=""   style="width:150px">
+                          <img src="{{  service.image | absolute_url }}" alt=""   style="width:150px">
                        
-                          <h1 class="title">{{ item.heading }}
+                          <h1 class="title">{{  service.heading }}
                                  </h1>
                           <div class="texto">
                             <p> 
-                             {{ item.description }}
+                             {{  service.description }}
                      
                             </p>
                           </div>
@@ -88,4 +89,4 @@
     </div>
   </section>
   
-  {% endif %}
+ 

@@ -22,6 +22,13 @@ sections:
     templates:
       - slide
   - type: directory
+    path: _services
+    label: Services
+    create: all
+    match: "*"
+    templates:
+      - service
+  - type: directory
     path: photos
     label: Photos
     create: all

@@ -1,0 +1,19 @@
+---
+label: service
+hide_body: false
+fields:
+  - name: heading
+    label: Heading
+    type: text
+    hidden: false
+    default: ""
+
+  - name: description
+    label: Description
+    type: text
+    hidden: false
+    default: ""
+  - type: file
+    name: image
+    label: Image
+    default: ""

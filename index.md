@@ -1,7 +1,10 @@
 ---
 title: Home teste
 layout: home
-services: []
+services:
+- heading: mano loko
+  description: mano loko
+  icon: ''
 description: ''
 icon: ''
 

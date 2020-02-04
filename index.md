@@ -4,7 +4,7 @@ layout: home
 services:
 - heading: mano loko
   description: mano loko
-  icon: ''
+  icon: "/photos/furniture.svg"
 description: ''
 icon: ''
 

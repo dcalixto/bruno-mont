@@ -2,7 +2,7 @@
 title: Home teste
 layout: home
 services:
-- heading: PROFISSIONALISMO
+- heading: PROFISSIONAL
   description: Com mais de 10 anos no mercado.
   icon: "/photos/deal.svg"
 - heading: AGILIDADE

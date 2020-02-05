@@ -2,8 +2,11 @@
 label: photo
 hide_body: false
 fields:
-- name: fotos
-  type: image_gallery
-  config: {}
-  label: Fotos
-  description: Gallery
+  - name: fotos
+    type: image_gallery
+    config: {}
+    label: Fotos
+    description: Gallery
+  - name: image
+    label: Image
+    type: file

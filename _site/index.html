@@ -9,7 +9,7 @@
 <meta property="og:url" content="http://localhost:4000/" />
 <meta property="og:site_name" content="Bruno Montagem Express" />
 <script type="application/ld+json">
-{"@type":"WebSite","headline":"Home teste","sameAs":["https://twitter.com/Brunomontagem","https://www.facebook.com/Brunomontagem"],"url":"http://localhost:4000/","name":"Bruno Montagem","@context":"https://schema.org"}</script>
+{"@type":"WebSite","sameAs":["https://twitter.com/Brunomontagem","https://www.facebook.com/Brunomontagem"],"headline":"Home teste","name":"Bruno Montagem","url":"http://localhost:4000/","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   <head>
@@ -337,7 +337,7 @@
                         <div class="item text-center">
                           <img src="/photos/deal.svg" alt=""   style="width:150px">
                        
-                          <h1 class="title">PROFISSIONALISMO
+                          <h1 class="title">PROFISSIONAL
                                  </h1>
                           <div class="texto">
                             <p> 
@@ -440,12 +440,7 @@
         </div>
         <div class="col-lg-4 col-md-5 col-sm-6 col-xs-12">
           <div>
-            <form
-              method="post"
-              id="contact-form"
-              action="/support-form/submitForm"
-              role="form"
-            >
+            <form id="contact-form" name="contact" netlify>
               <div id="nextcloud-notice" class="info-support-container hidden">
                 <div class="icon-container">
                   <i class="fa fa-info-circle"></i>
@@ -455,6 +450,7 @@
               <div class="form-group">
                 <label class="float-left" for="input-prename">Nome</label>
                 <input
+                  name="name"
                   type="text"
                   required="required"
                   class="form-control"
@@ -473,6 +469,7 @@
                   id="input-mail"
                   name="input-mail"
                   value=""
+                  name="email"
                 />
               </div>
               <div class="form-group support-form-padding-top">
@@ -481,6 +478,7 @@
                   class="form-control support-message"
                   required="required"
                   rows="7"
+                  name="message"
                   id="input-message"
                   name="input-message"
                 ></textarea>

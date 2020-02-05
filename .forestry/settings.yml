@@ -1,56 +1,60 @@
 ---
 new_page_extension: md
 auto_deploy: false
-admin_path: ''
-webhook_url: 
+admin_path: ""
+webhook_url:
 sections:
-- type: jekyll-pages
-  label: Pages
-  create: all
-  templates:
-  - page
-- type: jekyll-posts
-  label: Posts
-  create: all
-  templates:
-  - post
-- type: directory
-  path: _slides
-  label: Slides
-  create: all
-  match: "*"
-  templates:
-  - slide
-- type: directory
-  path: _services
-  label: Services
-  create: all
-  match: "*"
-  templates:
-  - service
-- type: directory
-  path: photos
-  label: Photos
-  create: all
-  match: "*"
-- type: document
-  path: _data/information.yml
-  label: Contact Information
-- type: document
-  path: _data/about.yml
-  label: About
+  - type: jekyll-pages
+    label: Pages
+    create: all
+    templates:
+      - page
+  - type: jekyll-posts
+    label: Posts
+    create: all
+    templates:
+      - post
+  - type: directory
+    path: _slides
+    label: Slides
+    create: all
+    match: "*"
+    templates:
+      - slide
+  - type: directory
+    path: _services
+    label: Services
+    create: all
+    match: "*"
+    templates:
+      - service
+  - type: directory
+    path: photos
+    label: Photos
+    create: all
+    match: "*"
+  - type: document
+    path: _data/information.yml
+    label: Contact Information
+  - type: document
+    path: _data/about.yml
+    label: About
+  - type: document
+    path: _data/g-index.yml
+    label: Gallery index
 upload_dir: photos
 public_path: "/photos"
-front_matter_path: ''
-use_front_matter_path: 
+front_matter_path: ""
+use_front_matter_path:
 file_template: ":filename:"
 build:
   preview_env:
-  - JEKYLL_ENV=staging
+    - JEKYLL_ENV=staging
   preview_output_directory: _site
   install_dependencies_command: bundle install --path vendor/bundle
   preview_docker_image: forestryio/ruby:2.6
   mount_path: "/srv"
   working_dir: "/srv"
-  instant_preview_command: bundle exec jekyll serve --drafts --unpublished --future
+  instant_preview_command:
+    bundle exec jekyll serve --drafts --unpublished --future
     --port 8080 --host 0.0.0.0 -d _site

@@ -1,0 +1,9 @@
+---
+label: Gallery Index
+hide_body: true
+fields:
+  - name: image
+    label: Image
+    type: file
+pages:
+  - _data/g-index.yml

@@ -33,8 +33,8 @@ gallery:
     "date_time" # How to sort galleries on the index page.
     # Possible values are: title, date_time, best_image
   thumbnail_size:
-    x: 400 # max width of thumbnails (in pixels)
-    y: 300 # max height of thumbnails (in pixels)
+    x: 280 # max width of thumbnails (in pixels)
+    y: 160 # max height of thumbnails (in pixels)
 # The following options are for individual galleries and totally optional.
 #  galleries:
 #    chile_trip:

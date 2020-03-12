@@ -49,6 +49,15 @@ layout: default
                           <p>
                             {{ post.content}}
                           </p>
+                          {% for item in post.images-array %}
+                          <div class="col-sm-4">
+                            <img
+                              class="img-responsive"
+                              src="/assets/img/portfolio/{{ item.image }}"
+                              alt="{{ item.alt }}"
+                            />
+                          </div>
+                          {% endfor %}
                           <small>{{ post.date }}</small>
                         </div>
                       </div>

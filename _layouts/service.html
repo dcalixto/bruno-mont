@@ -5,7 +5,7 @@ layout: default
 <section id="header-section">
   <div
     class="header-background-image"
-    style="background-image:url('{{ image}}');"
+    style="background-image:url('{{ site.data.g-index.image}}');"
   >
     <div class="container">
       <div class="row row-flex-center-md">
@@ -36,7 +36,10 @@ layout: default
                 <li>
                   <div class="row">
                     <div class="col-sm-9">
-                      <img class="pull-left" src="holder.js/410x200" />
+                      <img
+                        class="img-fluid img-thumbnail pull-left"
+                        src="{{ post.post-images[0] }}"
+                      />
 
                       <div class="row">
                         <div class="col-xs-8 col-sm-6">
@@ -49,16 +52,10 @@ layout: default
                           <p>
                             {{ post.content}}
                           </p>
-                          {% for item in post.images-array %}
-                          <div class="col-sm-4">
-                            <img
-                              class="img-responsive"
-                              src="/assets/img/portfolio/{{ item.image }}"
-                              alt="{{ item.alt }}"
-                            />
-                          </div>
-                          {% endfor %}
-                          <small>{{ post.date }}</small>
+
+                          <span class="post-date"
+                            >{{ post.date | date: "%b %-d, %Y" }}</span
+                          >
                         </div>
                       </div>
                     </div>

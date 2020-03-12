@@ -30,5 +30,5 @@ fields:
   config: {}
   label: post-images
 pages:
+- "./_posts/2020-03-26-teste-8.md"
 - "./_posts/_posts/2020-03-12-teste-7.md"
-- "./_posts/teste-8.md"

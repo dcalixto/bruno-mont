@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Montagem de armário para fulano "
-date: 2020-03-20 03:00:00 +0000
+date: 2020-03-14 03:00:00 +0000
 
 post-images:
   - "/photos/IMG-20200310-WA0037.jpg"

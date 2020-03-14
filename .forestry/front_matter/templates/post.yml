@@ -29,3 +29,5 @@ fields:
   type: image_gallery
   config: {}
   label: post-images
+pages:
+- _posts/montagem-de-armário-para-fulano.md

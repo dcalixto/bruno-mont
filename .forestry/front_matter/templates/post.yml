@@ -30,5 +30,3 @@ fields:
     schema:
       format: markdown
   label: content
-pages:
-- _posts/2020-03-14-dwdede.md

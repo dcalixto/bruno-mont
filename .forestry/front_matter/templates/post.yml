@@ -12,14 +12,6 @@ fields:
   type: datetime
   hidden: false
   default: ''
-- type: list
-  name: related_posts
-  label: Related Posts
-  config:
-    use_select: true
-    source:
-      type: pages
-      section: posts
 - name: layout
   label: Layout
   type: text
@@ -29,5 +21,14 @@ fields:
   type: image_gallery
   config: {}
   label: post-images
+- name: content
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: content
 pages:
 - _posts/montagem-de-armário-para-fulano.md

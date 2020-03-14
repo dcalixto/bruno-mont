@@ -7,6 +7,7 @@ post-images:
 - "/photos/IMG-20200310-WA0037.jpg"
 - "/photos/IMG-20200310-WA0031.jpg"
 - "/photos/IMG-20200310-WA0038.jpg"
+content: Montagem de armario para fulano de tal, armario feito de tal com x comprimento
+  e y de largura levando x horas para montagem
 
 ---
-Montagem de armario para fulano de tal, armario feito de tal com x comprimento e y de largura levando x horas para montagem

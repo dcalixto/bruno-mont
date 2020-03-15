@@ -17,6 +17,9 @@ layout: default
                 <div class="content">
                   <div class="row">
                     <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                      <span class="post-date"
+                      >{{ page.date | date: "%b %-d, %Y" }}</span
+                    >
                       <div class="features-sb-container">
                         <p>
                           {% for image in page.post-images %}
@@ -72,6 +75,7 @@ layout: default
                       <div class="features-sb-container"></div>
                     </div>
                   </div>
+                 
                 </div>
 
 

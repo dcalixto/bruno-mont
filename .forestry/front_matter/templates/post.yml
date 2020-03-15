@@ -31,4 +31,4 @@ fields:
       format: markdown
   label: body
 pages:
-- "./_posts/test-body.md"
+- "./_posts/2020-03-14-test-body.md"

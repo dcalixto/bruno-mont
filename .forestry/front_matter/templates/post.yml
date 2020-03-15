@@ -21,7 +21,7 @@ fields:
   type: image_gallery
   config: {}
   label: post-images
-- name: content
+- name: body
   type: textarea
   default: ''
   config:
@@ -29,6 +29,4 @@ fields:
     wysiwyg: false
     schema:
       format: markdown
-  label: content
-pages:
-- "./_posts/2020-03-14-moveis.md"
+  label: body

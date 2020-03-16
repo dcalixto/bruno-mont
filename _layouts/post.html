@@ -23,14 +23,15 @@ layout: default
                       <div class="features-sb-container">
                         <p>
                           {% for image in page.post-images %}
-                          <div class="col-lg-3 col-md-4 col-6 image-gallery">
+                         <div class="col-lg-3 col-md-4 col-6 image-gallery"> 
+                         
                             <a
                               href="{{ image }}"
                               title="{{ image.name }}"
                               class="d-block mb-4 h-100"
                             >
                               <img
-                                class="img-fluid img-thumbnail"
+                                class="img-fluid img-thumbnail img-responsive"
                                 src="{{ image }}"
                                 alt="{{ image }}"
                                 title="{{ image }}"

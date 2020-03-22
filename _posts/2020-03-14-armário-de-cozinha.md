@@ -1,11 +1,11 @@
 ---
 layout: post
-title: 'Armario de cozinha '
+title: "Armario de cozinha "
 date: 2020-03-14 03:00:00 +0000
 post-images:
-- "/photos/IMG-20200310-WA0035.jpg"
-- "/photos/IMG-20200310-WA0033.jpg"
-body: Montagem de armário para fulano de tal, armário feito de tal com x comprimento
+  - "/photos/armario2.jpg"
+  - "/photos/armario3.jpg"
+body:
+  Montagem de armário para fulano de tal, armário feito de tal com x comprimento
   e y de largura levando x horas para montagem
-
 ---

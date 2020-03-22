@@ -1,5 +1,6 @@
 ---
-body: A história do Bruno montagem se iniciou no ano de xxxx, fundada pelo Montador
+body:
+  A história do Bruno montagem se iniciou no ano de xxxx, fundada pelo Montador
   Bruno  que depois de passar pelas empresas xxxx e Rei dos móveis viu que a necessidade
   do cliente não era apenas Montar e sim ser atendido por um profissional que soubesse
   se comportar dentro da sua casa, que se apresentasse devidamente uniformizado, e
@@ -21,4 +22,4 @@ body: A história do Bruno montagem se iniciou no ano de xxxx, fundada pelo Mont
   com uma equipe Administrativa composta por xxx montadores, todos devidamente registrados.
   Com 10 anos de experiência no ramo seguimos em frente sempre buscndo o aperfeiçoamento
   diário, no atendimento e na Montagem.
-image: "/photos/slides/wood.jpeg"
+image: "/photos/wood.jpeg"

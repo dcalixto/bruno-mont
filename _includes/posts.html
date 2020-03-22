@@ -1,7 +1,7 @@
 <section class="background-color-grey">
   <div class="inner-content-top-out-bottom-out">
     <div class="container">
-      <h2 class="text-center">Trabalhos</h2>
+      <h2 class="text-center">Trabalhos Recentes</h2>
       <div class="row">
         <div class="col-md-6">
           {% for post in site.posts limit:8 %}
@@ -13,8 +13,13 @@
               </a>
             </div>
             <hr />
+
             <div class="caption">
               <a href="{{ post.url }}"><h4>{{ post.title }}</h4></a>
+              <span class="post-date"
+                >{{ post.date | date: "%b %-d, %Y" }}</span
+              >
+              <p>{{ post.body }}</p>
             </div>
           </div>
 

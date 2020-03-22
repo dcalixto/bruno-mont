@@ -1,92 +1,94 @@
 
 
-<section class="background-color-grey">
-    <div class="inner-content-top-in-bottom-out">
-      <div class="container">
-        <h1 class="text-center"><!--{{ services.service_title }}--></h1>
-        <div class="row">
-          <div class="col-lg-12 col-md-12 col-sm-6 col-xs-12">
-            <div class="info-box info-box-with-icon border-card">
-              <div class="info-box-icon-container">
-                <div class="info-box-icon">
-                  <img
-                    src="{{ site.baseurl }}/assets/icon/tool.svg"
-                    alt="{{ site.title }}"
-                  />
-                </div>
-              </div>
-              <div class="info-box-content info-box-content-startpage">
-                <h3><!--{{ services.service_subtitle }}-->
-                  Serviços
+
+
+
+<section class="background-color-grey ">
+  <div class="inner-content-top-in-bottom-out">
+    <div class="container ">
+      <h1 class="text-center">  Serviços
+      </h1>
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-6 col-xs-12">
+          
+
+
+
+          <div class="panel panel-default">
+            <div class="info-box-icon-container ">
+              <div class="panel-body">
+              
+             
+          
+              <p class="margin-0">
+               <!-- {{ services.service_heading }}-->
+               Montamos e desmontamos todos os móveis. Agilidade e proficionalismo, Montamos moveis em mdf, mdp, aço, madeira, enfim todos os tipos de moveis.!
                 
-               </h3>
-                <p class="margin-0">
-                 <!-- {{ services.service_heading }}-->
-                 Montamos e desmontamos todos os móveis. Agilidade e proficionalismo, Montamos moveis em mdf, mdp, aço, madeira, enfim todos os tipos de moveis.!
-                </br>
-                  </p>
-                
-                
-                <!--{{ services.service_text }}-->
+              </br>
+                </p>
+              
+              
+              <!--{{ services.service_text }}-->
+             
+              <div class="container">
+                <div class="box-gray">
+                  <div class="row">
                
-                <div class="container">
-                  <div class="box-gray">
-                    <div class="row">
-                 
-                      {% for service in page.services limit:3 %}
-                      <div
-                        class="col-lg-3 col-md-3 col-sm-5 col-xs-11 border-right"
-                      >
-                        <div class="item text-center">
-                          <img src="{{  service.icon | site.baseurl }}" alt=""   style="width:150px">
-                       
-                          <h1 class="title">{{  service.heading }}
-                                 </h1>
-                          <div class="texto">
-                            <p> 
-                             {{  service.description }}
+                    {% for service in page.services limit:8 %}
+                    <div
+                      class=" col-lg-4 col-md-4 col-sm-4 col-xs-6"
+                    >
+                      
+                        <img src="{{  service.icon | site.baseurl }}" alt=""   style="width:150px">
                      
-                            </p>
-                          </div>
-                        </div>
+                      <!--   <h1 class="title">{{  service.heading }}
+                               </h1>-->
+                        <div class="card-text">
+                          <b> 
+                           {{  service.description }}
+                   
+                          </b>
+                        
                       </div>
-                      {% endfor %}
-  
                     </div>
+                    {% endfor %}
+
                   </div>
                 </div>
-                
               </div>
+              
+         
               <div class="info-box-ref">
-                <div class="info-box-price">Aceitamos todos os cartoes</div>
+                <div class="info-box-price">Aceitamos todos os cartões</div>
                 <img
-                style="width:100px"
+                style="width:50px"
                 src="{{ site.baseurl }}/assets/icon/mastercard.svg"
                 alt="matercard"
               />
               <img
-              style="width:100px"
+              style="width:50px"
               src="{{ site.baseurl }}/assets/icon/visa.svg"
               alt="visa"
             />
             <img
-            style="width:100px"
+            style="width:50px"
             src="{{ site.baseurl }}/assets/icon/elo.svg"
             alt="elo"
           />
           <img
-          style="width:100px"
+          style="width:50px"
           src="{{ site.baseurl }}/assets/icon/amex.svg"
           alt="amex"
         />
-
+    
            
               </div>
-            </div>
           </div>
+ 
+        </div>
         </div>
       </div>
     </div>
-  </section>
-  
- 
+  </div>
+</section>
+

@@ -22,80 +22,66 @@ layout: default
     </div>
   </div>
 </section>
+
 <section class="background-color-grey">
   <div class="inner-content-top-out-bottom-out">
     <div class="container">
+      <h2 class="text-center">Trabalhos</h2>
       <div class="row">
-        <div class="news-press-section">
-          <div class="press-news-container">
-            <div class="col-md-6">
-              <ul class="list-unstyled list-news">
-                <!-- orders content according to the "publishdate" field in front matter -->
-                {% for post in paginator.posts %}
+        <div class="col-md-6">
+          {% for post in paginator.posts %}
 
-                <li>
-                  <div class="row">
-                    <div class="col-sm-9">
-                      <img
-                        class="img-fluid img-thumbnail pull-left"
-                        src="{{ post.post-images[0] }}"
-                      />
+          <div class="thumbnail">
+            <div class="limit">
+              <a href="{{ post.url }}">
+                <img class="" src="{{ post.post-images[0] }}" />
+              </a>
+            </div>
+            <hr />
 
-                      <div class="row">
-                        <div class="col-xs-8 col-sm-6">
-                          <a href="{{ post.url }}"><h3>{{ post.title }}</h3></a>
-                        </div>
-                        <div class="col-xs-4 col-sm-6">
-                          <p>
-                            {{ post.heading}}
-                          </p>
-                          <p>
-                            {{ post.content}}
-                          </p>
-
-                          <span class="post-date"
-                            >{{ post.date | date: "%b %-d, %Y" }}</span
-                          >
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-
-                {% endfor %}
-              </ul>
-              <!-- pagination -->
-              {% if paginator.total_pages > 1 %}
-              <div class="pagination">
-                {% if paginator.previous_page %}
-                <a
-                  href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"
-                  >&laquo; Prev</a
-                >
-                {% else %}
-                <span>&laquo; Prev</span>
-                {% endif %} {% for page in (1..paginator.total_pages) %} {% if
-                page == paginator.page %}
-                <span class="webjeda">{{ page }}</span>
-                {% elsif page == 1 %}
-                <a href="/posts/">{{ page }}</a>
-                {% else %}
-                <a
-                  href="{{ paginator.next_page_path| prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}"
-                  >{{ page }}</a
-                >
-                {% endif %} {% endfor %} {% if paginator.next_page %}
-                <a
-                  href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}"
-                  >Next &raquo;</a
-                >
-                {% else %}
-                <span>Next &raquo;</span>
-                {% endif %}
-              </div>
-              {% endif %}
+            <div class="caption">
+              <a href="{{ post.url }}"><h4>{{ post.title }}</h4></a>
+              <span class="post-date"
+                >{{ post.date | date: "%b %-d, %Y" }}</span
+              >
+              <p>{{ post.body }}</p>
             </div>
           </div>
+
+          <!-- pagination -->
+
+          {% endfor %}
+
+          <!-- pagination -->
+          {% if paginator.total_pages > 1 %}
+          <div class="pagination">
+            {% if paginator.previous_page %}
+            <a
+              href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"
+              >&laquo; Prev</a
+            >
+            {% else %}
+            <span>&laquo; Prev</span>
+            {% endif %} {% for page in (1..paginator.total_pages) %} {% if page
+            == paginator.page %}
+            <span class="webjeda">{{ page }}</span>
+            {% elsif page == 1 %}
+            <a href="/posts/">{{ page }}</a>
+            {% else %}
+            <a
+              href="{{ paginator.next_page_path| prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}"
+              >{{ page }}</a
+            >
+            {% endif %} {% endfor %} {% if paginator.next_page %}
+            <a
+              href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}"
+              >Next &raquo;</a
+            >
+            {% else %}
+            <span>Next &raquo;</span>
+            {% endif %}
+          </div>
+          {% endif %}
         </div>
       </div>
     </div>
